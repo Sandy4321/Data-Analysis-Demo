@@ -417,8 +417,6 @@ xgb_fit$bestTune
 xgb_imp = varImp(xgb_fit, scale = T)
 ```
 
-```
-
 ```r
 plot(xgb_imp, top = 10)
 ```
@@ -428,7 +426,7 @@ plot(xgb_imp, top = 10)
 
 ### Model Evaluation
 
-Three models all have the same AUC of 0.93 and a very close global accuracy. Random Forest is distinguished for its perfect prediction of the `-50k` class (99.4% precision), and for its inefficiency in predicting the `+50k` class (24.7% precision). Gradient Boosting has a slightly lower TP rate of 97.2% and a higher TN rate of 31.2%. Penalized LR makes more compromise between TP and TN, it has the lowest TR rate of 95.4% but a much higher TN rate of 57.1%. 
+Three models all have the same AUC of 0.93 and a very close global accuracy. Random Forest is distinguished for its perfect prediction of the `-50k` class (99.4% precision), and for its inefficiency in predicting the `+50k` class (24.7% precision). Gradient Boosting has a slightly lower TP rate of 97.2% and a higher TN rate of 31.2%. Penalized LR makes more compromise between TP and TN, it has the lowest TP rate of 95.4% but a much higher TN rate of 57.1%. 
 
 | Model               | Global Accuracy | True positive rate   | True negative rate  |
 | ------------------- | --------------- | -------------------- | ------------------- |
