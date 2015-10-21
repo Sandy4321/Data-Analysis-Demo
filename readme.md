@@ -271,8 +271,8 @@ census_train = census_data %>% filter(train == 1) %>% select(-train)
 census_test = census_data %>% filter(train == 0) %>% select(-train)
 
 # !TEST sampling to reduce size of data
-census_train = census_train[sample(1:nrow(census_train), size = round(nrow(census_train)/10)),]
-census_test = census_test[sample(1:nrow(census_test), size = round(nrow(census_test)/10)),]
+# census_train = census_train[sample(1:nrow(census_train), size = round(nrow(census_train)/10)),]
+# census_test = census_test[sample(1:nrow(census_test), size = round(nrow(census_test)/10)),]
 
 # SMOTE
 library(DMwR)
@@ -415,6 +415,11 @@ xgb_fit$bestTune
 ```r
 # variable importance
 xgb_imp = varImp(xgb_fit, scale = T)
+```
+
+```
+
+```r
 plot(xgb_imp, top = 10)
 ```
 
