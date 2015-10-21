@@ -1,0 +1,15 @@
+base
+dplyr
+ggplot2
+lattice
+DMwR
+caret
+pROC
+foreach
+iterators
+doMC
+Matrix
+glmnet
+randomForest
+xgboost
+plyr
